@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencatatan Ompreng SPPG/MBG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="assets/mbg.png" alt="Logo Tim Ompreng" class="logo"> <!-- Ganti src dengan path gambar logo Anda -->
+    <h1>Pencatatan Ompreng Masuk - SPPG/MBG</h1>
+    
+
+    <form id="dataForm">
+        <label for="tanggal">Tanggal (Tgl/Bln/Thn):</label>
+        <input type="date" id="tanggal" required>
+        
+        <label for="armada">Armada:</label>
+        <select id="armada" required>
+            <option value="">Pilih Armada</option>
+            <option value="pertama">Armada Pertama</option>
+            <option value="kedua">Armada Kedua</option>
+        </select>
+         
+        <label for="driver">Driver:</label>
+        <input type="text" id="driver" readonly>
+        
+        <label for="helper">Helper:</label>
+        <input type="text" id="helper" readonly>
+        
+        <label for="ompreng">Ompreng yang Dibawa:</label>
+        <input type="number" id="ompreng" required>
+        
+        <label for="rit1">Rit Pertama:</label>
+        <input type="number" id="rit1" required>
+        
+        <label for="rit2">Rit Kedua:</label>
+        <input type="number" id="rit2" required>
+        
+        <label for="total">Total (Otomatis Hitung):</label>
+        <input type="number" id="total" readonly>
+        
+        <label for="armadaKurang">Armada yang Kurang (Jika Ada Ompreng Selip):</label>
+        <select id="armadaKurang">
+            <option value="">Tidak Ada</option>
+            <option value="pertama">Armada Pertama</option>
+            <option value="kedua">Armada Kedua</option>
+        </select>
+        
+        <label for="catatanKurang">Catatan Ompreng Kurang (Jumlah/Bukti):</label>
+        <textarea id="catatanKurang" placeholder="Misal: Kurang 50 ompreng di armada pertama"></textarea>
+        
+        <button type="submit">Simpan Data</button>
+        <div id="error" class="error"></div>
+    </form>
+
+
+
+    <div class="bottom-action">
+    <a href="data.html" class="btn-link">📄 Lihat Data Tersimpan</a>
+    </div>
+
+
+    <footer>
+        © 2026 Anwarullah. All rights reserved. <br>   
+            Dibuat dengan ❤️ oleh Anwarullah. <br>
+    </footer>
+  <script src="bar.js"></script>
+</body>
+</html>

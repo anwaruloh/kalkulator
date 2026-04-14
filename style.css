@@ -1,0 +1,225 @@
+/* =========================
+   GLOBAL RESET & VARIABLE
+========================= */
+:root {
+  --primary: #1e3a8a;       /* biru gelap */
+  --primary-light: #3b82f6;
+  --bg-main: #f1f5f9;       /* putih keabu-abuan */
+  --bg-card: #ffffff;
+  --text-main: #1f2933;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =========================
+   HEADER
+========================= */
+.logo {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 120px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+  background: var(--bg-card);
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* spacing antar field */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-light);
+}
+
+/* =========================
+   ERROR
+========================= */
+.error {
+  margin-top: 10px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* =========================
+   TABLE
+========================= */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--primary);
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+th {
+  background: #e0e7ff;
+  text-align: left;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   BOTTOM ACTION
+========================= */
+.bottom-action {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   LINK BUTTON
+========================= */
+.btn-link {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 12px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 10px;
+    white-space: nowrap;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
